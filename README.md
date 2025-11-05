@@ -7,7 +7,7 @@ How to use the code provided in /code/ and /data/
 
 This readme explain how to use the files in the repository.
 
-First of all, you need to download everything to a local folder, the ones in /data/ which is the dataset to be tested (20newsgroip), and also you need to dowload the 2 files found in /code/
+First of all, you need to download everything to a local folder, the ones in /data/ which is the dataset to be tested (20newsgroup), and also you need to dowload the 2 files found in /code/
 
 The file "CS777-termproject-GodoyZhang_v3.py" runs a snipped that will load the dataset and run a pipeline in 5 stages :
 
@@ -20,24 +20,23 @@ The file "CS777-termproject-GodoyZhang_v3.py" runs a snipped that will load the 
 
 At the end, it will show the results as a table, and save the results for posterior use to create a table and plots
 
-
 The file "CS777-display_results-GodoyZhang.py" runs a snipped that will:
 
 -. load the results previously saved
 -. make a table from the results
--. make 2 plots with the results, showing accuracy and  runtime (seconds)
+-. make 1 figure with 2 subplots with the results, showing accuracy (1st plot) and  runtime (seconds) (2nd plot)
 
 
 Example of running the code
 ===========================
 
-Here, we show the main code line where the user can add the name of the database 
+Here, we show the main code line where you (the user) can add the name of the database 
 to be used:
 
 df = spark.read.csv("20newsgroups_full.csv", header=True, inferSchema=True)
 #df = spark.read.csv("gs://hw05-bg-5/20newsgroups_full.csv", header=True, inferSchema=True)
 
-If the user works on the cloud, it can load the file from one of the pre-defined buckets. The example is set up to be run on a local machine, but the user can easily change where to place the working database
+If you work on the cloud, you can load the file from a pre-defined bucket. The example is set up to be run on a local machine, but the user can easily change where to place the working database
 
 For the 20newsgroup dataset, this file will give the following results in a table:
 
@@ -61,7 +60,7 @@ print("\n=== Loaded Results ===")
 print(loaded_results.to_string(index=False))
 
 WHat if follows after that is only the formatting of a figure to plot the results. 
-Two plots will be shown as part of one figure.
+Two subplots will be shown as part of one figure.
 
 
 20 Newsgroups Dataset Overview:
