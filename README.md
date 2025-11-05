@@ -1,6 +1,6 @@
 # CS777-termpaper
 
-CS777 Fall 2025 term paper description
+CS777 Fall 2025 term paper files use and description
 
 How to use the code provided in /code/ and /data/
 ================================================
